@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSentinel</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>CryptoSentine</h1>
+
+    <section>
+      <h2>Encrypt / Decrypt Message</h2>
+      <textarea id="message" placeholder="Enter your message..."></textarea>
+      <input type="text" id="secretKey" placeholder="Enter secret key">
+      <button onclick="encryptMessage()">Encrypt</button>
+      <button onclick="decryptMessage()">Decrypt</button>
+      <p><strong>Result:</strong></p>
+      <pre id="cryptoResult"></pre>
+    </section>
+
+    <section>
+      <h2>Hash Generator</h2>
+      <input type="file" id="fileInput">
+      <button onclick="generateHash()">Generate Hash</button>
+      <pre id="hashResult"></pre>
+    </section>
+
+    <section>
+      <h2>Password Strength Checker</h2>
+      <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button onclick="checkPassword()">Check Password</button>
+      <p id="passwordResult"></p>
+    </section>
+
+  
+    <section>
+      <h2>File Integrity Timeline</h2>
+      <input type="file" id="timelineFileInput">
+      <button onclick="trackFileIntegrity()">Track Integrity</button>
+      <canvas id="integrityChart" width="400" height="200"></canvas>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
